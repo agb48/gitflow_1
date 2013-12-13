@@ -4,7 +4,7 @@
 	<artifactId>root-pom</artifactId>
 
 
-	<version>1.0.4-SNAPSHOT</version>
+	<version>1.0.4-root-pom--SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 
