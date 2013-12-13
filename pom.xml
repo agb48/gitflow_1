@@ -4,7 +4,7 @@
 	<artifactId>root-pom</artifactId>
 
 
-	<version>1.0.5</version>
+	<version>1.0.7</version>
 	<packaging>pom</packaging>
 
 
@@ -29,11 +29,13 @@
 	</distributionManagement>
 
 	<properties>
+	
 		<guava.version>14.0</guava.version>
 	</properties>
 
 	<modules>
 		<module>free_proj</module>
+		<module>other_project</module>
 	</modules>
 
 	<dependencyManagement>
