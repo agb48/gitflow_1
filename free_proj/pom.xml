@@ -11,6 +11,9 @@
 			<url>http://localhost:8080/nexus/content/repositories/releases/</url>
 			<uniqueVersion>false</uniqueVersion>
 		</repository>
+		
+		
+		
 		<snapshotRepository>
 			<id>3Ci-nexus-snapshots</id>
 			<url>http://localhost:8080/nexus/content/repositories/snapshots/</url>
