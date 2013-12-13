@@ -43,7 +43,7 @@
 					<autoVersionSubmodules>false</autoVersionSubmodules>
 					<pushReleases>true</pushReleases>
 					<releaseBranchVersionSuffix>${project.name}-</releaseBranchVersionSuffix>
-					<scmCommentPrefix>${project.name}</scmCommentPrefix>
+					<scmCommentPrefix>${project.name} </scmCommentPrefix>
 					<noDeploy>false</noDeploy>
 				</configuration>
 			</plugin>
