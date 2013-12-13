@@ -1,56 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.agb.free</groupId>
+ <parent>
+		<groupId>com.agb.gitflow1</groupId>
+		<artifactId>root-pom</artifactId>
+		<version>1.0.4</version>
+	</parent>
+	
 	<artifactId>free_proj</artifactId>
-	<version>1.0.3</version>
+  
 
-
-	<distributionManagement>
-		<repository>
-			<id>3Ci-nexus</id>
-			<url>http://localhost:8080/nexus/content/repositories/releases/</url>
-			<uniqueVersion>false</uniqueVersion>
-		</repository>
-		
-		
-		
-		<snapshotRepository>
-			<id>3Ci-nexus-snapshots</id>
-			<url>http://localhost:8080/nexus/content/repositories/snapshots/</url>
-			<uniqueVersion>false</uniqueVersion>
-		</snapshotRepository>
-	</distributionManagement>
-
-
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>com.atlassian.maven.plugins</groupId>
-				<artifactId>maven-jgitflow-plugin</artifactId>
-				<version>1.0-alpha26</version>
-				<configuration>
-					<flowInitContext>
-					
-						<masterBranchName>master</masterBranchName>
-						<developBranchName>develop</developBranchName>
-						<featureBranchPrefix>SSMS-</featureBranchPrefix>
-						<releaseBranchPrefix>${project.name}-</releaseBranchPrefix>
-						<hotfixBranchPrefix>SSMS-${project.name}-HOTFIX-</hotfixBranchPrefix>
-						<versionTagPrefix>${project.name}-</versionTagPrefix>
-					</flowInitContext>
-					<allowSnapshots>false</allowSnapshots>
-					<allowUntracked>false</allowUntracked>
-					<pushFeatures>true</pushFeatures>
-					<allowUntracked>false</allowUntracked>
-					<autoVersionSubmodules>false</autoVersionSubmodules>
-					<pushReleases>true</pushReleases>
-					<releaseBranchVersionSuffix>${project.name}-</releaseBranchVersionSuffix>
-					<scmCommentPrefix>${project.name} </scmCommentPrefix>
-					<noDeploy>false</noDeploy>
-				</configuration>
-			</plugin>
-		</plugins>
-
-	</build>
 </project>
