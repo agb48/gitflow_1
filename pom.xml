@@ -62,10 +62,10 @@
 					<flowInitContext>
 						<masterBranchName>master</masterBranchName>
 						<developBranchName>development</developBranchName>
-						<featureBranchPrefix>feature-</featureBranchPrefix>
-						<releaseBranchPrefix>release-</releaseBranchPrefix>
-						<hotfixBranchPrefix>hotfix-</hotfixBranchPrefix>
-						<versionTagPrefix>SSMS-</versionTagPrefix>
+						<featureBranchPrefix>SSMS-</featureBranchPrefix>
+						<releaseBranchPrefix>${project.name}-</releaseBranchPrefix>
+						<hotfixBranchPrefix>${project.name}-hotfix-</hotfixBranchPrefix>
+						<versionTagPrefix>${project.name}-</versionTagPrefix>
 					</flowInitContext>
 					<allowSnapshots>false</allowSnapshots>
 					<allowUntracked>false</allowUntracked>
