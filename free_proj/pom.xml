@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.agb.free</groupId>
 	<artifactId>free_proj</artifactId>
-	<version>1.0.2</version>
+	<version>1.0.3</version>
 
 
 	<distributionManagement>
@@ -20,10 +20,6 @@
 			<uniqueVersion>false</uniqueVersion>
 		</snapshotRepository>
 	</distributionManagement>
-
-
-
-
 
 
 
