@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.agb.free</groupId>
 	<artifactId>free_proj</artifactId>
-	<version>1.0.1</version>
+	<version>1.0.2</version>
 
 
 	<distributionManagement>
@@ -11,12 +11,19 @@
 			<url>http://localhost:8080/nexus/content/repositories/releases/</url>
 			<uniqueVersion>false</uniqueVersion>
 		</repository>
+		
+		
+		
 		<snapshotRepository>
 			<id>3Ci-nexus-snapshots</id>
 			<url>http://localhost:8080/nexus/content/repositories/snapshots/</url>
 			<uniqueVersion>false</uniqueVersion>
 		</snapshotRepository>
 	</distributionManagement>
+
+
+
+
 
 
 
@@ -28,12 +35,13 @@
 				<version>1.0-alpha26</version>
 				<configuration>
 					<flowInitContext>
+					
 						<masterBranchName>master</masterBranchName>
 						<developBranchName>develop</developBranchName>
 						<featureBranchPrefix>SSMS-</featureBranchPrefix>
-						<releaseBranchPrefix>SSMS-</releaseBranchPrefix>
-						<hotfixBranchPrefix>SSMS-HOTFIX-</hotfixBranchPrefix>
-						<versionTagPrefix>SSMS-</versionTagPrefix>
+						<releaseBranchPrefix>${project.name}-</releaseBranchPrefix>
+						<hotfixBranchPrefix>SSMS-${project.name}-HOTFIX-</hotfixBranchPrefix>
+						<versionTagPrefix>${project.name}-</versionTagPrefix>
 					</flowInitContext>
 					<allowSnapshots>false</allowSnapshots>
 					<allowUntracked>false</allowUntracked>
@@ -42,7 +50,7 @@
 					<autoVersionSubmodules>false</autoVersionSubmodules>
 					<pushReleases>true</pushReleases>
 					<releaseBranchVersionSuffix>${project.name}-</releaseBranchVersionSuffix>
-					<scmCommentPrefix>${project.name}</scmCommentPrefix>
+					<scmCommentPrefix>${project.name} </scmCommentPrefix>
 					<noDeploy>false</noDeploy>
 				</configuration>
 			</plugin>
