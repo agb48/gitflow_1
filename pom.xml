@@ -34,6 +34,7 @@
 
 	<modules>
 		<module>free_proj</module>
+		<module>other_project</module>
 	</modules>
 
 	<dependencyManagement>
@@ -58,7 +59,7 @@
 				<groupId>com.atlassian.maven.plugins</groupId>
 				<artifactId>maven-jgitflow-plugin</artifactId>
 				<version>1.0-alpha26</version>
-				<configuration>
+				<configuration combine.self="override">
 					<flowInitContext>
 						<masterBranchName>master</masterBranchName>
 						<developBranchName>development</developBranchName>
