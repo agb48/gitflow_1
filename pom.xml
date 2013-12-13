@@ -29,6 +29,7 @@
 	</distributionManagement>
 
 	<properties>
+	
 		<guava.version>14.0</guava.version>
 	</properties>
 
