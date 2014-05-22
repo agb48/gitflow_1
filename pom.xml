@@ -4,7 +4,7 @@
 	<artifactId>root-pom</artifactId>
 
 
-	<version>1.0.7-SNAPSHOT</version>
+	<version>1.0.5</version>
 	<packaging>pom</packaging>
 
 
@@ -29,12 +29,14 @@
 	</distributionManagement>
 
 	<properties>
+	
 		<guava.version>14.0</guava.version>
 		<maven-jgitflow-plugin.version>1.0-alpha27</maven-jgitflow-plugin.version>
 	</properties>
 
 	<modules>
 		<module>free_proj</module>
+		<module>other_project</module>
 	</modules>
 
 	<dependencyManagement>
