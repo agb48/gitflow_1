@@ -4,7 +4,7 @@
 	<artifactId>root-pom</artifactId>
 
 
-	<version>1.0.7</version>
+	<version>1.0.5</version>
 	<packaging>pom</packaging>
 
 
@@ -31,6 +31,7 @@
 	<properties>
 	
 		<guava.version>14.0</guava.version>
+		<maven-jgitflow-plugin.version>1.0-alpha27</maven-jgitflow-plugin.version>
 	</properties>
 
 	<modules>
@@ -56,30 +57,42 @@
 
 	<build>
 		<plugins>
+		<plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.5</version>
+                <configuration>
+                    <tagBase>${tagBase}</tagBase>
+                    <tagNameFormat>@{project.version}</tagNameFormat>
+                    <branchBase>${branchBase}</branchBase>
+                    <localCheckout>true</localCheckout>
+                    <!-- it's not sure that the local Checkout will work cause the pushChanges 
+                        property is not set as false. Test will be needed -->
+                </configuration>
+            </plugin>
+            
 			<plugin>
-				<groupId>com.atlassian.maven.plugins</groupId>
-				<artifactId>maven-jgitflow-plugin</artifactId>
-				<version>1.0-alpha26</version>
-				<configuration>
-					<flowInitContext>
-						<masterBranchName>master</masterBranchName>
-						<developBranchName>development</developBranchName>
-						<featureBranchPrefix>SSMS-</featureBranchPrefix>
-						<releaseBranchPrefix>${project.name}-</releaseBranchPrefix>
-						<hotfixBranchPrefix>${project.name}-hotfix-</hotfixBranchPrefix>
-						<versionTagPrefix>${project.name}-</versionTagPrefix>
-					</flowInitContext>
-					<allowSnapshots>false</allowSnapshots>
-					<allowUntracked>false</allowUntracked>
-					<pushFeatures>true</pushFeatures>
-					<allowUntracked>false</allowUntracked>
-					<autoVersionSubmodules>false</autoVersionSubmodules>
-					<pushReleases>true</pushReleases>
-					<releaseBranchVersionSuffix>${project.name}-</releaseBranchVersionSuffix>
-					<scmCommentPrefix>${project.name}</scmCommentPrefix>
-					<noDeploy>false</noDeploy>
-				</configuration>
-			</plugin>
+                <groupId>com.atlassian.maven.plugins</groupId>
+                <artifactId>maven-jgitflow-plugin</artifactId>
+                <version>${maven-jgitflow-plugin.version}</version>
+                <configuration>
+                    <flowInitContext>
+                        <masterBranchName>master</masterBranchName>
+                        <developBranchName>develop</developBranchName>
+                        <featureBranchPrefix>feature-</featureBranchPrefix>
+                        <releaseBranchPrefix>release-</releaseBranchPrefix>
+                        <hotfixBranchPrefix>hotfix-</hotfixBranchPrefix>
+                    </flowInitContext>
+                    <allowSnapshots>false</allowSnapshots>
+                    <allowUntracked>false</allowUntracked>
+                    <pushFeatures>true</pushFeatures>
+                    <allowUntracked>false</allowUntracked>
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
+                    <pushReleases>true</pushReleases>
+                    <noDeploy>true</noDeploy>
+                    <enableSshAgent>true</enableSshAgent>
+                </configuration>
+            </plugin>
 		</plugins>
 
 	</build>
