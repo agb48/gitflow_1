@@ -31,7 +31,7 @@
 	<properties>
 	
 		<guava.version>14.0</guava.version>
-		<maven-jgitflow-plugin.version>1.0-alpha27</maven-jgitflow-plugin.version>
+		<maven-jgitflow-plugin.version>1.0-m2</maven-jgitflow-plugin.version>
 	</properties>
 
 	<modules>
