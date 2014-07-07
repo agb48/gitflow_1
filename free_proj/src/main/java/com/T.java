@@ -8,5 +8,7 @@ public class T {
 	public void doit(){
 		System.out.println("cambio para el release");
 		// CAMBIO 1
+        // CAMBIO 2
+        // CAMBIO 3
 	}
 }
