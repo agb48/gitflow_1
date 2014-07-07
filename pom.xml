@@ -72,25 +72,26 @@
             </plugin>
             
 			<plugin>
-                <groupId>com.atlassian.maven.plugins</groupId>
-                <artifactId>maven-jgitflow-plugin</artifactId>
+                <groupId>external.atlassian.jgitflow</groupId>
+                <artifactId>jgitflow-maven-plugin</artifactId>
                 <version>${maven-jgitflow-plugin.version}</version>
-                <configuration>
-                    <flowInitContext>
-                        <masterBranchName>master</masterBranchName>
-                        <developBranchName>develop</developBranchName>
-                        <featureBranchPrefix>feature-</featureBranchPrefix>
-                        <releaseBranchPrefix>release-</releaseBranchPrefix>
-                        <hotfixBranchPrefix>hotfix-</hotfixBranchPrefix>
-                    </flowInitContext>
-                    <allowSnapshots>false</allowSnapshots>
-                    <allowUntracked>false</allowUntracked>
-                    <pushFeatures>true</pushFeatures>
-                    <allowUntracked>false</allowUntracked>
-                    <autoVersionSubmodules>true</autoVersionSubmodules>
-                    <pushReleases>true</pushReleases>
-                    <noDeploy>true</noDeploy>
-                    <enableSshAgent>true</enableSshAgent>
+            <configuration>
+                <flowInitContext>
+                    <masterBranchName>master</masterBranchName>
+                    <developBranchName>develop</developBranchName>
+                    <featureBranchPrefix>feature-</featureBranchPrefix>
+                    <releaseBranchPrefix>release-</releaseBranchPrefix>
+                    <hotfixBranchPrefix>hotfix-</hotfixBranchPrefix>
+                </flowInitContext>
+                <allowSnapshots>false</allowSnapshots>
+                <allowUntracked>false</allowUntracked>
+                <pushFeatures>true</pushFeatures>
+                <allowUntracked>false</allowUntracked>
+                <autoVersionSubmodules>true</autoVersionSubmodules>
+                <releaseBranchVersionSuffix>RC</releaseBranchVersionSuffix>
+                <pushReleases>true</pushReleases>
+                <noDeploy>false</noDeploy>
+                <enableSshAgent>true</enableSshAgent>
                 </configuration>
             </plugin>
 		</plugins>
